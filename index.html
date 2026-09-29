@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bachaav Bazaar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">🥕</div>
+      <div>
+        <h1>Bachaav Bazaar</h1>
+        <p>Order what you need. Save what you don't.</p>
+      </div>
+    </div>
+
+    <div class="people-control">
+      <label for="people">People</label>
+      <button id="peopleMinus" aria-label="Decrease people">−</button>
+      <span id="peopleCount">1</span>
+      <button id="peoplePlus" aria-label="Increase people">+</button>
+    </div>
+
+    <button class="cart-button" id="cartButton">
+      🛒 Cart <span id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="eyebrow">LESS WASTE • SMARTER SHOPPING</span>
+        <h2>Fresh supplies,<br><span>without the waste.</span></h2>
+        <p>Choose supplies for your household. Bachaav Bazaar automatically keeps every category within its sensible limit.</p>
+      </div>
+      <div class="hero-illustration" aria-hidden="true">
+        <span>🍞</span><span>🌾</span><span>🥛</span><span>🥕</span>
+      </div>
+    </section>
+
+    <section class="rules">
+      <div>👨‍👩‍👧 <b id="rulePeople">1 person</b></div>
+      <div>📦 <b>Up to 3 categories</b></div>
+      <div>⚖️ <b>Weight items: 1 kg/person</b></div>
+    </section>
+
+    <div class="section-heading">
+      <div>
+        <h2>Pick your supplies</h2>
+        <p>Each category has its own total allowance.</p>
+      </div>
+      <div class="category-meter"><span id="categoryMeter">0 / 3 categories</span></div>
+    </div>
+
+    <div id="categoryGrid" class="category-grid"></div>
+  </main>
+
+  <aside class="cart-panel" id="cartPanel" aria-hidden="true">
+    <div class="cart-header">
+      <div>
+        <h2>Your Cart</h2>
+        <p id="cartSummary">Nothing added yet.</p>
+      </div>
+      <button id="closeCart" class="icon-button" aria-label="Close cart">×</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="saving-note">🌱 No payment yet — this is the cart stage.</div>
+      <button id="clearCart" class="clear-button">Clear cart</button>
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
